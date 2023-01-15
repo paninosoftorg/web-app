@@ -27,11 +27,12 @@ $("#loginForm").submit(function(event){
     email = $form.find( "input[name='email']" ).val(),
     password = $form.find( "input[name='password']" ).val(),
     url = $form.attr( "action" );
-
+    console.log(email + " " + password);
     var posting = $.post( url, { email: email, password: password } );
 
     posting.done(function( data ) {
     var content = $( data ).find( "#content" );
+    console.log(content);
     $( "#result" ).empty().append( content );
     });
 });
