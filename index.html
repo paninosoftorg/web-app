@@ -28,7 +28,7 @@ $("#loginForm").submit(function(event){
     password = $form.find( "input[name='password']" ).val(),
     url = $form.attr( "action" );
     console.log(email + " " + password);
-    var posting = $.post( url, { email: email, password: password } );
+    var posting = $.post( url, { email: email.val(), password: password.val() } );
 
     posting.done(function( data ) {
     var content = $( data ).find( "#content" );
