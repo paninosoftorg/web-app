@@ -1,0 +1,118 @@
+  #myList {
+    padding: 10px;
+    background-color: #188198;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+  * {
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+  }
+
+  .root {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(24, 129, 152, 0.200);
+  }
+
+  .logo-img {
+    width: 200px;
+  }
+
+  .fixed-height {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: #0c4653;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .fixed-height,
+  .fixed-height a {
+    color: white;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 320px;
+    height: 250px;
+    top: 25%;
+    left: 50%;
+    margin-left: -160px;
+    /* Negative half of width. */
+  }
+
+  .form-box {
+    width: 100%;
+    background-color: rgba(196, 240, 249, 1);
+    padding: 20px;
+    margin: 15px;
+    box-shadow: black 0px 1px 4px;
+  }
+
+  .splide__slide {
+    padding: 10px;
+  }
+
+  .form-box a,
+  p,
+  h1,
+  .text-input {
+    color: #188198;
+  }
+
+  .form-box h1 {
+    line-height: 0;
+  }
+
+  .text-input {
+    background-color: transparent;
+    width: 88%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: solid 1px #188198;
+  }
+
+  .form-submit {
+    padding: 10px;
+    display: flex;
+    justify-content: right;
+  }
+
+  .submit-button {
+    color: white;
+    background-color: #0C4653;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+  }
+
+  .swiper-slide {
+    width: 100%;
+  }
+
+  .toggle-show {
+    display: block;
+  }
