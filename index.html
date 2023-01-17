@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/auth/res/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <title>Paninosoft | Login</title>
+</head>
+
+<body>
+    <div class="root">
+
+        <div class="form-container">
+
+            <img class="logo-img" src="/auth/res/logo.svg" alt="Paninosoft Logo">
+
+            <div class="form-box">
+                <section class="splide" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <div style="display: none;">
+                <div id="error">
+                    <h1 id="error_title">Errore 400</h1>
+                    <p id="error_message">Richiesta Malformata, non è possibile continuare.</p>
+                </div>
+                <div id="signin_step_email">
+                    <h1>Login</h1>
+                    <p>Per continuare su Paninosoft</p>
+
+                    <div class="form-input">
+                        <p><input id="signin_input_email" class="text-input" type="email" name="email" placeholder="Email" required></p>
+                    </div>
+                    <div class="form-submit">
+                        <button id="signin_goto_step_password" class="submit-button">
+                            Continua
+                        </button>
+                    </div>
+                </div>
+                <div id="signin_step_password">
+                    <h1>Bentornato</h1>
+                    <p>Inserisci la tua password per continuare</p>
+
+                    <div class="form-input">
+                        <p><input class="text-input" type="password" name="password" placeholder="Password"></p>
+                    </div>
+                    <div class="form-submit">
+                        <input class="submit-button" type="submit" value="Continua">
+                    </div>
+                </div>
+            </div>
+
+            <div id="signup_message" style="display: none;" class="form-box">
+                <a href="#">Crea un nuovo account Paninosoft</a>
+            </div>
+
+            <div id="signin_message" style="display: none;" class="form-box">
+                <a href="#">Accedi al tuo account Paninosoft</a>
+            </div>
+
+        </div>
+
+        <div class="fixed-height">
+            Usando Paninosoft accetti i <a href="#">Termini di Servizio</a> e la <a href="#">Politica sulla Privacy</a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="/auth/res/scripts/swiper.js"></script>
+    <script src="/auth/res/scripts/auth.js"></script>
+</body>
+
+</html>
