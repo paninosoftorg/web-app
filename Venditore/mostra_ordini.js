@@ -4,7 +4,7 @@ function reqListener() {
 
   var li = "";
   for (let i = 0; i < obj.length; i++) {
-     li = obj[i].user + "<br />" + obj[i].created;
+     li += obj[i].user + "<br />" + obj[i].created + "<br />";
   }
   document.getElementById("myList").innerHTML = li;
 }
