@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="res/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <title>Paninosoft | Login</title>
+    <link rel="icon" type="image/x-icon" href="res/icon.ico">
 </head>
 
 <body>
@@ -34,13 +35,14 @@
                     <p id="error_message">Richiesta Malformata, non è possibile continuare.</p>
                 </div>
                 <div id="signin_step_email">
-                    <h1>Login</h1>
+                    <meta slide-id="signin_step_email">
+                    <h1>Accedi</h1>
                     <p>Per continuare su Paninosoft</p>
 
                     <div class="form-input">
                         <p><input id="signin_input_email" class="form-input-text" type="email" name="email" placeholder="Email" required></p>
                     </div>
-                    <p id="signin_step_email_error" class="input-error-text"></p>
+                    <p id="signin_error_email" class="input-error-text"></p>
                     <div class="form-submit">
                         <span>&nbsp;</span>
                         <button id="signin_goto_step_password" class="form-forward-button">
@@ -49,12 +51,14 @@
                     </div>
                 </div>
                 <div id="signin_step_password">
+                    <meta slide-id="signin_step_password">
                     <h1>Bentornato</h1>
                     <p>Inserisci la tua password per continuare</p>
 
                     <div class="form-input">
                         <p><input id="signin_input_password" class="form-input-text" type="password" name="password" placeholder="Password"></p>
                     </div>
+                    <p id="signin_error_password" class="input-error-text"></p>
                     <div class="form-submit">
                         <button id="signin_goto_step_email" class="form-back-button">
                             Indietro

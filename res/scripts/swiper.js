@@ -24,3 +24,7 @@ function splideShowNext(id){
 function splideBack(id){
     splide.go('<');
 }
+
+function splideCurrentSlide(){
+    return document.querySelectorAll('.splide__slide.is-active')[0].getElementsByTagName('META')[0].getAttribute('slide-id');
+}
