@@ -1,6 +1,6 @@
 $('#signin_goto_submit').click(function () {
     if (!isBlank($('#signin_input_password').val())) {
-        $('#signin_error_password').innerHTML = null;
+        $('#signin_error_password').html(null);
         var email = $('#signin_input_email').val();
         var password = $('#signin_input_password').val();
 
@@ -13,14 +13,25 @@ $('#signin_goto_submit').click(function () {
                 "password": password
             }),
             success: function (result) {
-                alert("API request successful: " + result.userID);
+                postSuccess(result);
             },
             error: function (xhr, textStatus, errorThrown) {
                 alert(errorThrown);
             }
         });
+
     } else {
-        $('#signin_error_password').innerHTML = "Inserisci una password";
+        $('#signin_error_password').html("Inserisci una password");
     }
 
 });
+
+function postSuccess(result){
+    if (urlParams.get('callback') == 'self') {
+        $('#post_results').html(JSON.stringify(result));
+        splideReset();
+        splideShowNext("result_to_self");
+    } else {
+        window.location.href = urlParams.get('callback') + "?userID=" + result.userID;
+    }
+}
