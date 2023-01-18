@@ -20,3 +20,7 @@ function splideShowNext(id){
     splide.add(document.getElementById(id));
     splide.go('>');
 }
+
+function splideBack(id){
+    splide.go('<');
+}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/auth/res/styles.css">
+    <link rel="stylesheet" href="res/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <title>Paninosoft | Login</title>
 </head>
@@ -42,7 +42,8 @@
                     </div>
                     <p id="signin_step_email_error" class="input-error-text"></p>
                     <div class="form-submit">
-                        <button id="signin_goto_step_password" class="form-submit-button">
+                        <span>&nbsp;</span>
+                        <button id="signin_goto_step_password" class="form-forward-button">
                             Continua
                         </button>
                     </div>
@@ -55,7 +56,12 @@
                         <p><input class="form-input-text" type="password" name="password" placeholder="Password"></p>
                     </div>
                     <div class="form-submit">
-                        <input class="form-submit-button" type="submit" value="Continua">
+                        <button id="signin_goto_step_email" class="form-back-button">
+                            Indietro
+                        </button>
+                        <button id="signin_goto_submit" class="form-forward-button">
+                            Continua
+                        </button>
                     </div>
                 </div>
             </div>
@@ -70,7 +76,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="/auth/res/scripts/swiper.js"></script>
-    <script src="/auth/res/scripts/auth.js"></script>
+    <script src="/auth/res/scripts/ui_logic.js"></script>
 </body>
 
 </html>

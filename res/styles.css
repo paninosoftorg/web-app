@@ -78,13 +78,22 @@ body { /* The Body */
 .form-submit { /* Submit Button Container */
     padding: 10px;
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
 }
-.form-submit-button { /* Submit Button */
+.form-forward-button { /* Submit Button */
     color: white;
     background-color: #0C4653;
     border-radius: 5px;
     border: none;
+    padding: 10px;
+}
+
+.form-back-button { /* Submit Button */
+    color: #188198;
+    background-color: transparent;
+    border-color: #0C4653;
+    border-radius: 5px;
+    border: solid 1px;
     padding: 10px;
 }
 
