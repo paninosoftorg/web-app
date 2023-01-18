@@ -7,10 +7,12 @@ switch (urlParams.get('type')) {
         ShowExtraMessage(0)
         break;
     case "signup":
-        splideShowNext("signup_step_name");
+        //splideShowNext("signup_step_name");
+        ShowExtraMessage(1)
         break;
     default:
         splideReset();
+        document.getElementById('extra_message').style.display = "none";
         splideShowNext("error");
         break;
 }
@@ -22,12 +24,6 @@ document.getElementById('signin_goto_step_password').addEventListener('click', (
 });
 
 function ShowExtraMessage(id) {
-    let ids = ["signup_message", "signin_message"];
-    for (let i = 0; i < ids.length; i++) {
-        if (i == id) {
-            document.getElementById(ids[i]).style.display = "block";
-        } else {
-            document.getElementById(ids[i]).style.display = "none";
-        }
-    }
+    let messages = ['<a href="#">Crea un nuovo account Paninosoft</a>', '<a href="#">Accedi al tuo account Paninosoft</a>'];
+    document.getElementById('extra_message').innerHTML = messages[id];
 }

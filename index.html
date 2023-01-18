@@ -15,10 +15,10 @@
 
         <div class="form-container">
 
-            <img class="logo-img" src="/auth/res/logo.svg" alt="Paninosoft Logo">
+            <canvas class="logo-img"></canvas>
 
-            <div class="form-box">
-                <section class="splide" aria-label="Splide Basic HTML Example">
+            <div class="slider-box">
+                <section class="splide">
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
@@ -38,10 +38,11 @@
                     <p>Per continuare su Paninosoft</p>
 
                     <div class="form-input">
-                        <p><input id="signin_input_email" class="text-input" type="email" name="email" placeholder="Email" required></p>
+                        <p><input id="signin_input_email" class="form-input-text" type="email" name="email" placeholder="Email" required></p>
                     </div>
+                    <p id="signin_step_email_error" class="input-error-text"></p>
                     <div class="form-submit">
-                        <button id="signin_goto_step_password" class="submit-button">
+                        <button id="signin_goto_step_password" class="form-submit-button">
                             Continua
                         </button>
                     </div>
@@ -51,25 +52,19 @@
                     <p>Inserisci la tua password per continuare</p>
 
                     <div class="form-input">
-                        <p><input class="text-input" type="password" name="password" placeholder="Password"></p>
+                        <p><input class="form-input-text" type="password" name="password" placeholder="Password"></p>
                     </div>
                     <div class="form-submit">
-                        <input class="submit-button" type="submit" value="Continua">
+                        <input class="form-submit-button" type="submit" value="Continua">
                     </div>
                 </div>
             </div>
 
-            <div id="signup_message" style="display: none;" class="form-box">
-                <a href="#">Crea un nuovo account Paninosoft</a>
-            </div>
-
-            <div id="signin_message" style="display: none;" class="form-box">
-                <a href="#">Accedi al tuo account Paninosoft</a>
-            </div>
+            <div id="extra_message" class="slider-box"></div>
 
         </div>
 
-        <div class="fixed-height">
+        <div class="footer">
             Usando Paninosoft accetti i <a href="#">Termini di Servizio</a> e la <a href="#">Politica sulla Privacy</a>
         </div>
     </div>
