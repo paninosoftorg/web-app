@@ -52,9 +52,11 @@ splide.on('active', function () {
     switch (splideCurrentSlide()) {
         case "signin_step_email":
             ShowExtraMessage(1)
+            document.getElementById('signin_input_email').focus({focusVisible: true});
             break;
         case "signin_step_password":
             ShowExtraMessage(0)
+            document.getElementById('signin_input_password').focus({focusVisible: true});
             break;
         case "signup_step_name":
             ShowExtraMessage(2)
