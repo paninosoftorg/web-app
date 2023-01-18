@@ -24,15 +24,6 @@ document.getElementById('signin_goto_step_password').addEventListener('click', (
     }
 });
 
-document.getElementById('signin_goto_submit').addEventListener('click', () => {
-    if (!isBlank(document.getElementById('signin_input_password').value)) {
-        document.getElementById('signin_error_password').innerHTML = null;
-        alert("Dati inviati: \n\n" + document.getElementById('signin_input_email').value + "\n\n" + document.getElementById('signin_input_password').value);
-    } else {
-        document.getElementById('signin_error_password').innerHTML = "Inserisci una password";
-    }
-});
-
 document.addEventListener("keydown", (event) => {
     if (event.isComposing || event.keyCode === 13) {
         switch (splideCurrentSlide()) {
