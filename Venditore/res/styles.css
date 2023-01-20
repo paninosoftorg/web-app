@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+/* Path: res\styles.css */
+
+/**     HTML Elements      **/
+* { /* Everything */
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body { /* The Body */
+    /* background-image: url("backgrounds/pixzolo-photography-3tL4vtrFqTQ-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; */
+    background-color: #188198;
+    margin: 0;
+    padding: 0;
+}
+
+.top-header { /* Top Header */
+    position: sticky;
+    top: 0;
+    background-color: #c4f0f9;
+    padding: 10px;
+    padding-bottom: 1px;
+    display: flex;
+    justify-content: left;
+    box-shadow: black 0px 1px 4px;
+}
+
+.top-header h1 {
+    color: #188198;
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 0;
+    width: 200px;
+    aspect-ratio: 157/30;
+}
+
+@media screen and (max-width: 600px) {
+    .top-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-header h1 {
+        font-size: 1.5em;
+        text-align: center;
+        aspect-ratio: 0;
+    }
+}
+
+.logo-img { /* Paninosoft Logo */
+    background-image: url("logo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    aspect-ratio: 157/30;
+}
+
+#myList { /* List */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#myList li {
+    list-style: none;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    background-color: #c4f0f9;
+    box-shadow: black 0px 1px 4px;
+    border-radius: 5px;
+}
