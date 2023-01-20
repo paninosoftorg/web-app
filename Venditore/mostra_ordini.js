@@ -4,22 +4,44 @@ var mm = String(date.getMonth() + 1).padStart(2, "0");
 var yyyy = date.getFullYear();
 var fulldate = dd + "-" + mm + "-" + yyyy;
 var reverse_date = yyyy + "-" + mm + "-" + dd;
+var getdate = reverse_date;
+var modificatedate = fulldate;
 
 document.getElementById("datepicker").value = reverse_date;
 
-function handler(e) {
-  var datainput = e.target.value;
+function getDate() {
+  var data = $('#datepicker').val();
+  var today = new Date(data);
+  var day = String(today.getDate()).padStart(2, "0");
+  var month = String(today.getMonth() + 1).padStart(2, "0");
+  var year = today.getFullYear();
+  document.getElementById("datepicker").value = year + "-" + month + "-" + day;
+  modificatedate = day + "-" + month + "-" + year;
+  request();
 }
 
-var counter = 0;
 function increment() {
-  counter++;
-  console.log(counter);
+  var today = new Date(getdate);
+  today.setDate(today.getDate() + 1);
+  var day = String(today.getDate()).padStart(2, "0");
+  var month = String(today.getMonth() + 1).padStart(2, "0");
+  var year = today.getFullYear();
+  getdate = year + "-" + month + "-" + day;
+  document.getElementById("datepicker").value = getdate;
+  modificatedate = day + "-" + month + "-" + year;
+  request();
 }
 
 function decrement() {
-  counter--;
-  console.log(counter);
+  var today = new Date(getdate);
+  today.setDate(today.getDate() - 1);
+  var day = String(today.getDate()).padStart(2, "0");
+  var month = String(today.getMonth() + 1).padStart(2, "0");
+  var year = today.getFullYear();
+  getdate = year + "-" + month + "-" + day;
+  document.getElementById("datepicker").value = getdate;
+  modificatedate = day + "-" + month + "-" + year;
+  request();
 }
 
 function reqListener() {
@@ -29,7 +51,7 @@ function reqListener() {
   var li = "";
   for (let i = 0; i < obj.length; i++) {
     for (let j = 0; j < obj[i].orders.length; j++) {
-      if (obj[i].orders[j].order_creation_date == fulldate) {
+      if (obj[i].orders[j].order_creation_date == modificatedate) {
         if (classi.includes(obj[i].class)) {
           li +=
             "<li>Numero ordine: " +
@@ -75,16 +97,12 @@ function reqListener() {
   document.getElementById("lista_ordini").innerHTML = li;
 }
 
-const req = new XMLHttpRequest();
-req.addEventListener("load", reqListener);
-req.open(
-  "GET",
-  "http://paninos.ddns.net/food-api/API/order/getArchiveBriefOrder.php"
-);
-req.send();
-
-/*const dp = $("#datepicker").format({ 
-  setDate: today,
-  format:'dd mm yyyy',
-  todayHighlight: true
-});*/
+function request() {
+  const req = new XMLHttpRequest();
+  req.addEventListener("load", reqListener);
+  req.open(
+    "GET",
+    "http://paninos.ddns.net/food-api/API/order/getArchiveBriefOrder.php"
+  );
+  req.send();
+}
