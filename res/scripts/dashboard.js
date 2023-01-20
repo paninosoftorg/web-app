@@ -2,10 +2,10 @@ $(document).ready(function(){
     alert("dash ready");
     resumeSession(function(result){
         alert(result.user);
-        $("#userID").html(result.user);
+        $("#btnLogout").html(result.user);
     });
 });
 
-$("#logout").click(function(){
+$("#btnLogout").click(function(){
     logout();
 });
