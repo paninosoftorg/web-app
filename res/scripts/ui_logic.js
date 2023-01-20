@@ -1,21 +1,15 @@
-if (isBlank(urlParams.get('callback'))) {
-    splideReset();
-    $('#extra_message').css("display", "none");
-    splideShowNext("error");
-} else {
-    switch (urlParams.get('type')) {
-        case "signin":
-            splideShowNext("signin_step_email");
-            break;
-        // case "signup":
-        //     splideShowNext("signup_step_name");
-        //     break;
-        default:
-            splideReset();
-            $('#extra_message').css("display", "none");
-            splideShowNext("error");
-            break;
-    }
+switch (urlParams.get('type')) {
+    case "signin":
+        splideShowNext("signin_step_email");
+        break;
+    // case "signup":
+    //     splideShowNext("signup_step_name");
+    //     break;
+    default:
+        splideReset();
+        $('#extra_message').css("display", "none");
+        splideShowNext("error");
+        break;
 }
 
 $('#signin_goto_step_password').on('click', function () {
