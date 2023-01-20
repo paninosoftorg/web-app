@@ -11,10 +11,10 @@ function reqListener() {
   var li = "";
   for (let i = 0; i < obj.length; i++) {
     for (let j = 0; j < obj[i].orders.length; j++) {
-      if (obj[i].orders[j].order_creation_date == fulldate) {
+      if (obj[i].orders[j].order_creation_date != fulldate) {
         if (classi.includes(obj[i].class)) {
           li +=
-            "Numero ordine: " +
+            "<li>Numero ordine: " +
             obj[i].orders[j].order_id +
             "<br> Utente: " +
             obj[i].orders[j].user_name_surname +
@@ -27,10 +27,11 @@ function reqListener() {
             " - " +
             obj[i].orders[j].ordered_products +
             " - €" +
-            obj[i].orders[j].total_price;
+            obj[i].orders[j].total_price; +
+            "<br></li>";
         } else {
           li +=
-            "Classe:" +
+            "<li>Classe: " +
             obj[i].class +
             "<br> Numero ordine: " +
             obj[i].orders[j].order_id +
@@ -47,7 +48,7 @@ function reqListener() {
             " - €" +
             obj[i].orders[j].total_price
             + "<br>" + 
-            "<br />";
+            "<br /></li>";
             classi.push(obj[i].class);
         }
       }
