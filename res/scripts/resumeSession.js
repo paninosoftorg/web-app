@@ -5,6 +5,7 @@ function resumeSession(_callback) {
 
     if(!sessionCookie){
         return null;
+        window.location.replace("index.html");
     }
 
     $.ajax({
