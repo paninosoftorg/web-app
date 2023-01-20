@@ -36,18 +36,6 @@ body { /* The Body */
     aspect-ratio: 157/30;
 }
 
-@media screen and (max-width: 600px) {
-    .top-header {
-        flex-direction: column;
-        align-items: center;
-    }
-    .top-header h1 {
-        font-size: 1.5em;
-        text-align: center;
-        aspect-ratio: 0;
-    }
-}
-
 .logo-img { /* Paninosoft Logo */
     background-image: url("logo.svg");
     background-repeat: no-repeat;
@@ -90,6 +78,7 @@ body { /* The Body */
     display: flex;
     justify-content: space-around;
     margin: 10px;
+    width: 300px;
 }
 
 .date-picker {
@@ -98,4 +87,19 @@ body { /* The Body */
     border: none;
     color: white;
     border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .top-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-header h1 {
+        font-size: 1.5em;
+        text-align: center;
+        aspect-ratio: 0;
+    }
+    .controls {
+        width: calc(100% - 20px);
+    }
 }
