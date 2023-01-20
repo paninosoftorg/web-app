@@ -1,10 +1,16 @@
 var sessionToken;
+var locarray = window.location.pathname.split("/");
+var lastItem = locarray[locarray.length - 1];
 
 function resumeSession(_callback) {
     var sessionCookie = getCookie("sessionToken");
 
-    if(!sessionCookie){
+    if(!sessionCookie && lastItem.split("?")[0] != "index.html"){
         window.location.replace("index.html?type=signin");
+        return null;
+    }
+
+    if(!sessionCookie){
         return null;
     }
 
@@ -27,8 +33,7 @@ function resumeSession(_callback) {
 
 function checkSessionExpiry(result){
     var date = new Date(result.expiry);
-    var locarray = window.location.pathname.split("/");
-    var lastItem = locarray[locarray.length - 1];
+
     if(new Date() > date && lastItem != "index.html"){
         window.location.replace("index.html?type=signin&callback=" + window.location.pathname);
         alert("Sessione scaduta");
