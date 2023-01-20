@@ -36,6 +36,7 @@ function checkSessionExpiry(result){
 
     if(new Date() > date && lastItem != "index.html"){
         window.location.replace("index.html?type=signin&callback=" + window.location.pathname);
+        setCookie("sessionToken", "", "");
         alert("Sessione scaduta");
         return false;
     }else{
