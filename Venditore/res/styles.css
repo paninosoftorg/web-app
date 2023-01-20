@@ -56,7 +56,7 @@ body { /* The Body */
     aspect-ratio: 157/30;
 }
 
-#myList { /* List */
+#lista_ordini { /* List */
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -64,12 +64,38 @@ body { /* The Body */
     width: 100%;
 }
 
-#myList li {
+#lista_ordini li {
     list-style: none;
     color: black;
     margin: 10px;
     padding: 10px;
     background-color: #c4f0f9;
     box-shadow: black 0px 1px 4px;
+    border-radius: 5px;
+}
+
+.button { /* Simple Button */
+    color: white;
+    background-color: #0C4653;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    transition: 0.5s;
+}
+.button:hover {
+    background-color: #105868;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.date-picker {
+    background-color: #0C4653;
+    padding: 10px;
+    border: none;
+    color: white;
     border-radius: 5px;
 }

@@ -3,6 +3,9 @@ var dd = String(date.getDate()).padStart(2, "0");
 var mm = String(date.getMonth() + 1).padStart(2, "0");
 var yyyy = date.getFullYear();
 var fulldate = dd + "-" + mm + "-" + yyyy;
+var reverse_date = yyyy + "-" + mm + "-" + dd;
+
+document.getElementById("datepicker").value = reverse_date;
 
 function reqListener() {
   let data = [this.responseText];
@@ -54,7 +57,7 @@ function reqListener() {
       }
     }
   }
-  document.getElementById("myList").innerHTML = li;
+  document.getElementById("lista_ordini").innerHTML = li;
 }
 
 const req = new XMLHttpRequest();
