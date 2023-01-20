@@ -4,8 +4,8 @@ function resumeSession(_callback) {
     var sessionCookie = getCookie("sessionToken");
 
     if(!sessionCookie){
-        return null;
         window.location.replace("index.html");
+        return null;
     }
 
     $.ajax({
