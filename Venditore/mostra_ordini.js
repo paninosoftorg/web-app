@@ -7,6 +7,21 @@ var reverse_date = yyyy + "-" + mm + "-" + dd;
 
 document.getElementById("datepicker").value = reverse_date;
 
+function handler(e) {
+  var datainput = e.target.value;
+}
+
+var counter = 0;
+function increment() {
+  counter++;
+  console.log(counter);
+}
+
+function decrement() {
+  counter--;
+  console.log(counter);
+}
+
 function reqListener() {
   let data = [this.responseText];
   const obj = JSON.parse(data);
@@ -30,8 +45,8 @@ function reqListener() {
             " - " +
             obj[i].orders[j].ordered_products +
             " - €" +
-            obj[i].orders[j].total_price; +
-            "<br></li>";
+            obj[i].orders[j].total_price;
+          +"<br></li>";
         } else {
           li +=
             "<li>Classe: " +
@@ -49,10 +64,10 @@ function reqListener() {
             " - " +
             obj[i].orders[j].ordered_products +
             " - €" +
-            obj[i].orders[j].total_price
-            + "<br>" + 
+            obj[i].orders[j].total_price +
+            "<br>" +
             "<br /></li>";
-            classi.push(obj[i].class);
+          classi.push(obj[i].class);
         }
       }
     }

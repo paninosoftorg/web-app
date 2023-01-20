@@ -22,11 +22,11 @@
   <div class="root">
 
     <div class="controls">
-      <button class="button">
+      <button class="button" onClick="increment()">
         ←
       </button>
-      <input id="datepicker" class="date-picker" type="date" />
-      <button class="button">
+      <input id="datepicker" class="date-picker" type="date" onchange="handler(event);"/>
+      <button class="button" onClick="decrement()">
         →
       </button>
     </div>
