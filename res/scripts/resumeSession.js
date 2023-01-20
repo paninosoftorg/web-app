@@ -4,7 +4,7 @@ function resumeSession(_callback) {
     var sessionCookie = getCookie("sessionToken");
 
     if(!sessionCookie){
-        window.location.replace("index.html");
+        window.location.replace("index.html?type=signin");
         return null;
     }
 
