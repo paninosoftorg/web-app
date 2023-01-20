@@ -11,7 +11,7 @@ function reqListener() {
   var li = "";
   for (let i = 0; i < obj.length; i++) {
     for (let j = 0; j < obj[i].orders.length; j++) {
-      if (obj[i].orders[j].order_creation_date != fulldate) {
+      if (obj[i].orders[j].order_creation_date == fulldate) {
         if (classi.includes(obj[i].class)) {
           li +=
             "<li>Numero ordine: " +
