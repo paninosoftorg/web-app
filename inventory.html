@@ -84,7 +84,31 @@
             </div>
             <div class="inventory-edit-column">
                 <div class="inventory-single-element">
-                    &nbsp;
+                    <label for="edit_form_ID">ID</label>
+                    <input type="text" class="text-input" id="edit_form_ID" placeholder="ID" disabled>
+                    
+                    <label for="edit_form_Nome">Nome</label>
+                    <input type="text" class="text-input" id="edit_form_Nome" placeholder="Nome">
+                    
+                    <label for="edit_form_Prezzo">Prezzo</label>
+                    <input type="number" min="0" class="text-input" id="edit_form_Prezzo" placeholder="0">
+                    
+                    <label for="edit_form_Tag">Tag</label>
+                    <select id="edit_form_Tags" class="text-input" placeholder="Seleziona...">
+                        <option value="volvo">1</option>
+                        <option value="saab">2</option>
+                        <option value="fiat">3</option>
+                        <option value="audi">4</option>
+                    </select>
+                    
+                    <label for="edit_form_Quantita">Quantità</label>
+                    <input type="number" min="0" class="text-input" id="edit_form_Quantita" placeholder="0">
+                    
+                    <span style="height: 30px;"></span>
+
+                    <button id="edit_form_submit" class="button">
+                        Modifica
+                    </button>
                 </div>
             </div>
         </div>
