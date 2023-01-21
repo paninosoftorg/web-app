@@ -11,7 +11,7 @@ body { /* The Body */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover; */
-    background-color: #188198;
+    background-color: white;
     margin: 0;
     padding: 0;
 }
@@ -19,29 +19,31 @@ body { /* The Body */
 .top-header { /* Top Header */
     position: sticky;
     top: 0;
-    background-color: #c4f0f9;
-    padding: 10px;
+    background-color: #0c4653;
+    height: 100px;
     padding-bottom: 1px;
     display: flex;
     justify-content: left;
+    align-items: center;
     box-shadow: black 0px 1px 4px;
+    z-index: 100;
 }
 
-.top-header h1 {
-    color: #188198;
-    font-size: 2.5em;
-    font-weight: 600;
+.top-header p {
+    color: white;
+    font-size: 28px;
     margin: 0;
-    width: 200px;
-    aspect-ratio: 157/30;
 }
 
 .logo-img { /* Paninosoft Logo */
-    background-image: url("logo.svg");
+    background-image: url("icon.png");
+    border-radius: 0.4rem;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 200px;
-    aspect-ratio: 157/30;
+    width: 50px;
+    aspect-ratio: 1/1;
+    margin: 10px;
+    margin-left: 15px;
 }
 
 #lista_ordini { /* List */
