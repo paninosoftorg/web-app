@@ -20,7 +20,7 @@ $(document).ready(function(){
             }
         });
     });
-    
+
 });
 
 function checkPermission(permission){
@@ -36,4 +36,12 @@ function checkPermission(permission){
 
 $("#btnLogout").click(function(){
     logout();
+});
+
+$("#btnUsers").click(function(){
+    window.location.replace("users.html");
+});
+
+$("#btnStorage").click(function(){
+    window.location.replace("inventory.html");
 });

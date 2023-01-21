@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="res/styles/dashboard.css">
+    <title>Document</title>
+    <style>
+        #row li {
+            display: inline;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        #row{
+            padding-right: 0px;
+        }
+
+        /* .container {
+            display: inline-block;
+        } */
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="res/styles/icon.png" class="logo">Dashboard Paninosoft
+        <ul>
+            <li>
+              <a href="#">Account▾</a>
+              <ul class="dropdown">
+               <li><a id="manageAccount" href="account.html">Gestisci account</a></li>
+               <li><a id="btnLogout" href="#">Logout</a></li>
+               <li><a href="#">Opzione 3</a></li>
+               <li><a href="#">Opzione 4</a></li>
+              </ul>
+              </li>
+         </ul>
+    </header>
+    <div>
+        <ul id="row">
+            <li>Nome</li>
+            <li>Cognome</li>
+            <li>Classe</li>
+            <li>E-mail</li>
+        </ul>
+    </div>
+    <div class="container">
+        <ul id="row">
+        </ul>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="res/scripts/auth.js"></script>
+    <script src="res/scripts/resumeSession.js"></script>
+    <script src="res/scripts/manageUsers.js"></script>
+
+    <footer> Copyright ©PaninosoftSRL 2023</footer>
+</body>
+
+</html>
