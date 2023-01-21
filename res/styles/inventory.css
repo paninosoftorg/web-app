@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+/* Path: res\styles.css */
+
+/**     HTML Elements      **/
+* { /* Everything */
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body { /* The Body */
+    /* background-image: url("backgrounds/pixzolo-photography-3tL4vtrFqTQ-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; */
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.inventory-list-column {
+    width: 55%;
+    height: 100%;
+}
+
+.inventory-edit-column {
+    width: 45%;
+    height: 100%;
+}
+
+.inventory-list-controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(196, 240, 249, 1);
+    margin: 10px;
+    height: 8%;
+    border-radius: 5px;
+    box-shadow: black 0px 1px 4px;
+}
+
+.inventory-list-items {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(196, 240, 249, 1);
+    margin: 10px;
+    height: 92%;
+    border-radius: 5px;
+    box-shadow: black 0px 1px 4px;
+    overflow-y: auto;
+}
+
+.item-details {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+.item-header {
+    background-color: #0C4653;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.inventory-single-element {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    background-color: rgba(196, 240, 249, 1);
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: black 0px 1px 4px;
+}
+
+.inventory-screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.top-header { /* Top Header */
+    position: sticky;
+    top: 0;
+    background-color: #0c4653;
+    height: 100px;
+    padding-bottom: 1px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-shadow: black 0px 1px 4px;
+}
+
+.top-header p {
+    color: white;
+    font-size: 28px;
+    margin: 0;
+}
+
+.logo-img { /* Paninosoft Logo */
+    background-image: url("icon.png");
+    border-radius: 0.4rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    aspect-ratio: 1/1;
+    margin: 10px;
+    margin-left: 15px;
+}
+
+.button { /* Simple Button */
+    color: white;
+    background-color: #0C4653;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    transition: 0.5s;
+}
+.button:hover {
+    background-color: #105868;
+}
+
+.text-input {
+    background-color: #0C4653;
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .top-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-header p {
+        font-size: 1.5em;
+        text-align: center;
+        aspect-ratio: 0;
+    }
+    .inventory-edit-column {
+        display: none;
+    }
+    .inventory-list-column {
+        width: 100%;
+    }
+    .inventory-list-controls {
+        flex-direction: column;
+        align-items: center;
+        height: 20%;
+    }
+    .inventory-list-items {
+        height: 80%;
+    }
+}
