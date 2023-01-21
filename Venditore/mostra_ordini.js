@@ -6,7 +6,8 @@ var fulldate = dd + "-" + mm + "-" + yyyy;
 var reverse_date = yyyy + "-" + mm + "-" + dd;
 var getdate = reverse_date;
 var modificatedate = fulldate;
-var status_ID = 4;
+let status_ID = 4;
+request();
 
 document.getElementById("datepicker").value = getdate;
 
@@ -150,7 +151,6 @@ function order_cases(num) {
       var li = case1 + case3 + case4 + case5;
       document.getElementById("lista_botton").innerHTML = li;
       document.getElementById("lista_ordini").innerHTML = "";
-
       break;
     case 3:
       status_ID = 3;
@@ -177,11 +177,13 @@ function order_cases(num) {
 }
 
 function request() {
-  console.log(status_ID);
   const req = new XMLHttpRequest();
   req.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       req.addEventListener("load", reqListener);
+    }
+    else if(this.status == 204){
+      document.getElementById("lista_ordini").innerHTML = "Nessun ordine trovato";
     }
   };
   req.open(
