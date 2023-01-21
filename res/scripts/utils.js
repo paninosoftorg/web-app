@@ -11,3 +11,8 @@ function ValidateEmail(email) {
     }
     return (false)
 }
+
+function InventoryListHeight() {
+    var height = $(window).height() - $(".top-header").height() - 40;
+    $(".inventory-screen").height(height);
+}

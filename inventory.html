@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="res/styles/inventory.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <title>Paninosoft | Inventario</title>
+    <link rel="icon" type="image/x-icon" href="res/styles/icon.ico">
+</head>
+
+<body>
+
+    <header class="top-header">
+        <canvas class="logo-img"></canvas>
+        <p>Inventario</p>
+    </header>
+
+    <div class="root">
+
+        <div class="inventory-screen">
+            <div class="inventory-list-column">
+                <div class="inventory-list-controls">
+                    <div class="inventory-list-controls-top">
+                        <input type="text" class="text-input" name="search" id="search" placeholder="Cerca...">
+                    </div>
+                    <div class="inventory-list-controls-bottom">
+                        <button id="add" class="button">
+                            Aggiungi
+                        </button>
+                        <button id="remove" class="button">
+                            Rimuovi
+                        </button>
+                    </div>
+                </div>
+                <div class="inventory-list-items">
+                    <div class="item-details item-header">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+
+                    <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                    <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                    <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                    <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                    <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                    <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                    <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                                        <div class="item-details">
+                        <div class="checklist-column">
+                            <p>
+                                <input type="checkbox" name="checklist" id="checklist">
+                            </p>
+                        </div>
+                        <div class="id-column">
+                            <p>ID</p>
+                        </div>
+                        <div class="id-name">
+                            <p>Nome</p>
+                        </div>
+                        <div class="id-price">
+                            <p>Prezzo</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Tag</p>
+                        </div>
+                        <div class="id-column">
+                            <p>Quantità</p>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+            <div class="inventory-edit-column">
+                <div class="inventory-single-element">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="res/scripts/resumeSession.js"></script>
+    <script src="res/scripts/utils.js"></script>
+    <script>InventoryListHeight(); addEventListener("resize", (event) => { InventoryListHeight() });</script>
+</body>
+
+</html>
