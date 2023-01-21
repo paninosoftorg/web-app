@@ -1,0 +1,29 @@
+.user-card {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: Josefin Sans;
+}
+
+.account-name {
+    color: rgb(163, 163, 163);
+    text-align: left;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.info{
+    text-align: left;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    padding-bottom: 5px;
+}
+
+.profile{
+    width: 75%;
+    margin: 0px 0px 25px 0px;
+    border-radius: 0%;
+}
