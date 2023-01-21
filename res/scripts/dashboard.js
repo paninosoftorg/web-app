@@ -12,7 +12,8 @@ $(document).ready(function(){
                 ID: userID
             },
             success: function(result){
-                checkPermission();
+                alert("got permission: " + result[0].permission);
+                checkPermission(result[0].permission);
             },
             error: function(xhr, textStatus, errorThrown){
                 alert(errorThrown);
@@ -23,6 +24,7 @@ $(document).ready(function(){
 });
 
 function checkPermission(permission){
+    alert("Permission: " + permission);
     if(permission != 1 & permission != 2 ){
         $("#btnUsers").remove();
     }
