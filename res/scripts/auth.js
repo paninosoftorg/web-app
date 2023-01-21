@@ -54,7 +54,7 @@ function createSessionToken(userID) {
     var datetime = getCookieExpiry(2);
 
     $.ajax({
-        url: 'http://paninos.ddns.net/food-api/API/sessionToken/createToken.php',
+        url: 'https://paninos.ddns.net/food-api/API/sessionToken/createToken.php',
         type: 'POST',
         data: JSON.stringify({
             "user": userID,
