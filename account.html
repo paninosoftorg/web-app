@@ -22,8 +22,8 @@
                 <li>
                     <a href="#">Account▾</a>
                     <ul class="dropdown">
-                        <li><a href="#">Opzione 1</a></li>
-                        <li><a href="#">Opzione 2</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a id="btnLogout" href="#">Logout</a></li>
                         <li><a href="#">Opzione 3</a></li>
                         <li><a href="#">Opzione 4</a></li>
                     </ul>
@@ -38,25 +38,29 @@
                 </div>
                 <div>
                     <h5 class="account-name">Nome</h5>
-                    <h4 class="info">Giancarlo</h4>
+                    <h4 id="name" class="info">Giancarlo</h4>
                 </div>
                 <div>
                     <h5 class="account-name">Cognome</h5>
-                    <h4 class="info">Magalli</h4>
+                    <h4 id="surname" class="info">Magalli</h4>
                 </div>
                 <div>
                     <h5 class="account-name">Email</h5>
-                    <h4 class="info">giancarlo.magalli@iisviolamarchesini.edu.it</h4>
+                    <h4 id="email" class="info">giancarlo.magalli@iisviolamarchesini.edu.it</h4>
                 </div>
                 <div>
                     <h5 class="account-name">Ruolo</h5>
-                    <h4 class="info">Studente</h4>
+                    <h4 id="role" class="info">Studente</h4>
                 </div>
             </div>
         </main>
 
         <footer> Copyright ©PaninosoftSRL 2023</footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="res/scripts/auth.js"></script>
+    <script src="res/scripts/resumeSession.js"></script>
+    <script src="res/scripts/manageAccount.js"></script>
 
 </body>
 
