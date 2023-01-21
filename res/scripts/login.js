@@ -1,8 +1,8 @@
 $(document).ready(function(){
     if(!resumeSession()){
-        alert("No token");
+        //alert("No token");
     }else{
-        alert("Session resumed");
+        //alert("Session resumed");
     }
 });
 
