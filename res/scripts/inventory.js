@@ -3,10 +3,10 @@ $(document).ready(function () {
 });
 
 function manageStorage() {
-    showProducts();
+    showProductList();
 }
 
-function showProducts() {
+function showProductList() {
     var li = "<div class=\"item-details item-header\"><div class=\"id-column\"><p>ID</p></div><div class=\"id-name\"><p>Nome</p></div><div class=\"id-price\"><p>Prezzo</p></div><div class=\"id-column\"><p>Tag</p></div><div class=\"id-column\"><p>Quantità</p></div></div>";
     getProducts(function (productArray) {
         productArray.forEach(element => {
@@ -33,5 +33,29 @@ function getProducts(_callback) {
 }
 
 function selectProduct(button){
-    alert(button.id);
+    $.ajax({
+        url: "https://paninos.ddns.net/food-api/API/product/getProduct.php",
+        type: "GET",
+        data: {
+            PRODUCT_ID: button.id
+        },
+        success: function (result) {
+            showProduct(result[0]);
+        },
+        error: function (xhr, textError, errorStatus) {
+            alert(errorStatus);
+        }
+    });
+}
+
+function showProduct(product){
+    $("#edit_form_ID").attr("placeholder", product.id);
+    $("#edit_form_Nome").attr("placeholder", product.name);
+    $("#edit_form_Prezzo").attr("placeholder", product.price);
+    $("#edit_form_Tags").attr("placeholder", product.tag);
+    $("#edit_form_Quantita").attr("placeholder", product.quantity);
+}
+
+function updateProduct(name, price, tag, quantity){
+
 }

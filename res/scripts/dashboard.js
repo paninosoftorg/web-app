@@ -42,6 +42,10 @@ $("#btnUsers").click(function(){
     window.location.replace("users.html");
 });
 
+$("#btnOrder").click(function(){
+    window.location.replace("Venditore/mostra_ordini.html");
+});
+
 $("#btnStorage").click(function(){
     window.location.replace("inventory.html");
 });
