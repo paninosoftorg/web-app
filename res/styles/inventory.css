@@ -106,6 +106,7 @@ body { /* The Body */
     justify-content: left;
     align-items: center;
     box-shadow: black 0px 1px 4px;
+    z-index: 100;
 }
 
 .top-header p {
@@ -155,8 +156,12 @@ body { /* The Body */
         text-align: center;
         aspect-ratio: 0;
     }
+    .inventory-screen {
+        flex-direction: column;
+        justify-content: start;
+    }
     .inventory-edit-column {
-        display: none;
+        width: 100%;
     }
     .inventory-list-column {
         width: 100%;
