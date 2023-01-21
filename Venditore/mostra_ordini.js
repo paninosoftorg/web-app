@@ -7,15 +7,16 @@ var reverse_date = yyyy + "-" + mm + "-" + dd;
 var getdate = reverse_date;
 var modificatedate = fulldate;
 
-document.getElementById("datepicker").value = reverse_date;
+document.getElementById("datepicker").value = getdate;
 
 function getDate() {
-  var data = $('#datepicker').val();
+  var data = $("#datepicker").val();
   var today = new Date(data);
   var day = String(today.getDate()).padStart(2, "0");
   var month = String(today.getMonth() + 1).padStart(2, "0");
   var year = today.getFullYear();
-  document.getElementById("datepicker").value = year + "-" + month + "-" + day;
+  getdate = year + "-" + month + "-" + day;
+  document.getElementById("datepicker").value = getdate;
   modificatedate = day + "-" + month + "-" + year;
   request();
 }
@@ -46,7 +47,7 @@ function decrement() {
 
 function reqListener() {
   let data = [this.responseText];
-  const obj = JSON.parse(data);
+  obj = JSON.parse(data);
   var classi = [];
   var li = "";
   for (let i = 0; i < obj.length; i++) {
@@ -99,10 +100,15 @@ function reqListener() {
 
 function request() {
   const req = new XMLHttpRequest();
-  req.addEventListener("load", reqListener);
+  req.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      req.addEventListener("load", reqListener);
+    }
+  };
   req.open(
     "GET",
-    "http://paninos.ddns.net/food-api/API/order/getArchiveBriefOrder.php"
+    "https://paninos.ddns.net/food-api/API/order/getArchiveBriefOrder.php",
+    true
   );
   req.send();
 }
