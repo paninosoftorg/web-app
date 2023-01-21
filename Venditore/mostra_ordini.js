@@ -122,7 +122,7 @@ function reqListener() {
       }
     }
   }
-  document.getElementById("lista_ordini").innerHTML = li;
+  $("#lista_ordini").html(li);
 }
 
 var case1 =
@@ -142,36 +142,36 @@ function order_cases(num) {
       status_ID = 1;
       request();
       var li = case2 + case3 + case4 + case5;
-      document.getElementById("lista_botton").innerHTML = li;
-      document.getElementById("lista_ordini").innerHTML = "";
+      $("#lista_ordini").html("");
+      $("#lista_botton").html(li);
       break;
     case 2:
       status_ID = 2;
       request();
       var li = case1 + case3 + case4 + case5;
-      document.getElementById("lista_botton").innerHTML = li;
-      document.getElementById("lista_ordini").innerHTML = "";
+      $("#lista_ordini").html("");
+      $("#lista_botton").html(li);
       break;
     case 3:
       status_ID = 3;
       request();
       var li = case1 + case2 + case4 + case5;
-      document.getElementById("lista_botton").innerHTML = li;
-      document.getElementById("lista_ordini").innerHTML = "";
+      $("#lista_ordini").html("");
+      $("#lista_botton").html(li);
       break;
     case 4:
       status_ID = 4;
       request();
       var li = case1 + case2 + case3 + case5;
-      document.getElementById("lista_botton").innerHTML = li;
-      document.getElementById("lista_ordini").innerHTML = "";
+      $("#lista_ordini").html("");
+      $("#lista_botton").html(li);
       break;
     case 5:
       status_ID = 5;
       request();
       var li = case1 + case2 + case3 + case4;
-      document.getElementById("lista_botton").innerHTML = li;
-      document.getElementById("lista_ordini").innerHTML = "";
+      $("#lista_ordini").html("");
+      $("#lista_botton").html(li);
       break;
   }
 }
@@ -183,7 +183,7 @@ function request() {
       req.addEventListener("load", reqListener);
     }
     else if(this.status == 204){
-      document.getElementById("lista_ordini").innerHTML = "Nessun ordine trovato";
+      $("#lista_ordini").html("Nessun ordine trovato");
     }
   };
   req.open(
