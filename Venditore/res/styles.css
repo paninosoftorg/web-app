@@ -94,6 +94,9 @@ body { /* The Body */
     color: white;
     border-radius: 5px;
 }
+.list-button {
+    margin-right: 15px;
+}
 
 @media screen and (max-width: 600px) {
     .top-header {
