@@ -5,8 +5,8 @@ var lastItem = locarray[locarray.length - 1];
 function resumeSession(_callback) {
     var sessionCookie = getCookie("sessionToken");
 
-    if(!sessionCookie && lastItem.split("?")[0] != "index.html"){
-        window.location.replace("index.html?type=signin");
+    if(!sessionCookie && lastItem.split("?")[0] != "auth.html"){
+        window.location.replace("auth.html?type=signin");
         return null;
     }
 
@@ -34,13 +34,13 @@ function resumeSession(_callback) {
 function checkSessionExpiry(result){
     var date = new Date(result.expiry);
 
-    if(new Date() > date && lastItem != "index.html"){
-        window.location.replace("index.html?type=signin&callback=" + window.location.pathname);
+    if(new Date() > date && lastItem != "auth.html"){
+        window.location.replace("auth.html?type=signin&callback=" + window.location.pathname);
         setCookie("sessionToken", "", "");
         alert("Sessione scaduta");
         return false;
     }else{
-        if(lastItem == "index.html"){
+        if(lastItem == "auth.html"){
             window.location.replace("dashboard.html");
         }
         return true;

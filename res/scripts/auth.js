@@ -1,6 +1,6 @@
 function logout(){
     setCookie("sessionToken", "", "");
-    window.location.replace("index.html?type=signin");
+    window.location.replace("auth.html?type=signin");
 }
 
 function generateSessionToken() {
