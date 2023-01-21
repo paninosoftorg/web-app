@@ -46,6 +46,10 @@ function decrement() {
 }
 
 function reqListener() {
+
+  order_controls_open = '<div class="order-controls">';
+  order_controls_close = '<button class="button list-button" id="order_number" onClick="">Button 3</button></div>';
+
   let data = [this.responseText];
   obj = JSON.parse(data);
   var classi = [];
@@ -55,7 +59,7 @@ function reqListener() {
       if (obj[i].orders[j].order_creation_date == modificatedate) {
         if (classi.includes(obj[i].class)) {
           li +=
-            "<li>Numero ordine: " +
+            order_controls_open + "<li>Numero ordine: " +
             obj[i].orders[j].order_id +
             "<br> Utente: " +
             obj[i].orders[j].user_name_surname +
@@ -69,10 +73,10 @@ function reqListener() {
             obj[i].orders[j].ordered_products +
             " - €" +
             obj[i].orders[j].total_price;
-          +"<br></li>";
+          +"<br></li></div>" + order_controls_close;
         } else {
           li +=
-            "<li>Classe: " +
+          order_controls_open + "<li>Classe: " +
             obj[i].class +
             "<br> Numero ordine: " +
             obj[i].orders[j].order_id +
@@ -89,7 +93,7 @@ function reqListener() {
             " - €" +
             obj[i].orders[j].total_price +
             "<br>" +
-            "<br /></li>";
+            "<br /></li>" + order_controls_close;
           classi.push(obj[i].class);
         }
       }

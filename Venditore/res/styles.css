@@ -52,14 +52,20 @@ body { /* The Body */
     width: 100%;
 }
 
-#lista_ordini li {
+#lista_ordini .order-controls {
     list-style: none;
     color: black;
     margin: 10px;
     padding: 10px;
+    padding-right: 20px;
     background-color: #c4f0f9;
     box-shadow: black 0px 1px 4px;
     border-radius: 5px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .button { /* Simple Button */
@@ -101,5 +107,16 @@ body { /* The Body */
     }
     .controls {
         width: calc(100% - 20px);
+    }
+    #lista_ordini .order-controls {
+        padding-right: 10px !important;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .list-button {
+        width: 60%;
     }
 }
