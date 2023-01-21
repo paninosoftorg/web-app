@@ -14,7 +14,7 @@ $('#signin_goto_submit').click(function () {
 
         $.ajax({
             type: "POST",
-            url: "http://paninos.ddns.net/food-api/API/user/login.php",
+            url: "https://paninos.ddns.net/food-api/API/user/login.php",
             data: JSON.stringify({
                 "email": email,
                 "password": password
