@@ -16,7 +16,7 @@ function resumeSession(_callback) {
 
     $.ajax({
         type: 'GET',
-        url: 'http://paninos.ddns.net/food-api/API/sessionToken/getUserByToken.php',
+        url: 'https://paninos.ddns.net/food-api/API/sessionToken/getUserByToken.php',
         data: {
             token: sessionCookie
         },
