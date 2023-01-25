@@ -25,6 +25,7 @@ $(document).ready(function(){
 
 function checkPermission(permission){
     //alert("Permission: " + permission);
+    alert(permission);
     switch(permission){
         case 1:
             $("btnOrder").show();
@@ -38,6 +39,8 @@ function checkPermission(permission){
             break; 
         case 3:
             $("btnOrder").show();
+            $("btnStorage").remove();
+            $("btnUsers").remove();
             break; 
         default:
             alert("No permesso");
