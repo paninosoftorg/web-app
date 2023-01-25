@@ -14,7 +14,7 @@ $(document).ready(function () {
             },
             success: function (result) {
                 //alert("got permission: " + result[0].permission);
-                if (!managePermissions(result[0].permission, sections.inventory)) {
+                if (!managePermissions(result, sections.inventory)) {
                     window.location.replace("dashboard.html");
                 }
             },
