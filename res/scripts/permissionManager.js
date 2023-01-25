@@ -5,6 +5,7 @@ const sections = {
 }
 
 function managePermissions(userPerms, section){
+    alert(userPerms + " " + section);
     switch(section){
         case sections.inventory:
             if(userPerms[0].permission == 1 || userPerms[0].permission == 2){
