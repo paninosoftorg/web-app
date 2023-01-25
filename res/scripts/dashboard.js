@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 function checkPermission(permission){
     //alert("Permission: " + permission);
-    alert(permission);
+    //alert(permission);
     switch(permission){
         case "1":
             $("#btnOrder").removeClass('hidden-by-default');
