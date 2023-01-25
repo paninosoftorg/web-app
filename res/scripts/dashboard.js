@@ -25,10 +25,10 @@ $(document).ready(function(){
 
 function checkPermission(permission){
     //alert("Permission: " + permission);
-    if(permission = 1 && permission = 2 ){
+    if(permission == 1 && permission == 2 ){
         $("#btnUsers").show();
     }
-    if(permission = 1 && permission = 2 && permission = 3){
+    if(permission == 1 && permission == 2 && permission == 3){
         $("#btnStorage").show();
         $("#btnOrders").show();
     }
