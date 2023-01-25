@@ -39,13 +39,13 @@ $("#btnLogout").click(function(){
 });
 
 $("#btnUsers").click(function(){
-    window.location.replace("users.html");
+    window.location.href("users.html");
 });
 
 $("#btnOrder").click(function(){
-    window.location.replace("orders.html");
+    window.location.href("orders.html");
 });
 
 $("#btnStorage").click(function(){
-    window.location.replace("inventory.html");
+    window.location.href("inventory.html");
 });
