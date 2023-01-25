@@ -27,17 +27,17 @@ function checkPermission(permission){
     //alert("Permission: " + permission);
     alert(permission);
     switch(permission){
-        case 1:
+        case "1":
             $("btnOrder").show();
             $("btnStorage").show();
             $("btnUsers").show();
             break;
-        case 2:
+        case "2":
             $("btnOrder").show();
             $("btnStorage").show();
             $("btnUsers").show();
             break; 
-        case 3:
+        case "3":
             $("btnOrder").show();
             $("btnStorage").remove();
             $("btnUsers").remove();
