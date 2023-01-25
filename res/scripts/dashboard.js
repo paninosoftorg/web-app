@@ -43,7 +43,7 @@ $("#btnUsers").click(function(){
 });
 
 $("#btnOrder").click(function(){
-    window.location.replace("Venditore/mostra_ordini.html");
+    window.location.replace("orders.html");
 });
 
 $("#btnStorage").click(function(){
