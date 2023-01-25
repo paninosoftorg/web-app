@@ -28,19 +28,19 @@ function checkPermission(permission){
     alert(permission);
     switch(permission){
         case "1":
-            $("btnOrder").show();
-            $("btnStorage").show();
-            $("btnUsers").show();
+            $("btnOrder").removeClass('hidden-by-default');
+            $("btnStorage").removeClass('hidden-by-default');
+            $("btnUsers").removeClass('hidden-by-default');
             break;
         case "2":
-            $("btnOrder").show();
-            $("btnStorage").show();
-            $("btnUsers").show();
+            $("btnOrder").removeClass('hidden-by-default');
+            $("btnStorage").removeClass('hidden-by-default');
+            $("btnUsers").removeClass('hidden-by-default');
             break; 
         case "3":
-            $("btnOrder").show();
-            $("btnStorage").remove();
-            $("btnUsers").remove();
+            $("btnOrder").removeClass('hidden-by-default');
+            //$("btnStorage").remove();
+            //$("btnUsers").remove();
             break; 
         default:
             alert("No permesso");
