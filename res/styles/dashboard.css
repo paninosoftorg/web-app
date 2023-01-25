@@ -39,7 +39,7 @@ footer::before {
 }
 
 .hidden-by-default {
-    display: none;
+    opacity: 0;
 }
 
 .grid-container {
