@@ -25,12 +25,23 @@ $(document).ready(function(){
 
 function checkPermission(permission){
     //alert("Permission: " + permission);
-    if(permission == 1 && permission == 2 ){
-        $("#btnUsers").show();
-    }
-    if(permission == 1 && permission == 2 && permission == 3){
-        $("#btnStorage").show();
-        $("#btnOrders").show();
+    switch(permission){
+        case 1:
+            $("btnOrder").show();
+            $("btnStorage").show();
+            $("btnUsers").show();
+            break;
+        case 2:
+            $("btnOrder").show();
+            $("btnStorage").show();
+            $("btnUsers").show();
+            break; 
+        case 3:
+            $("btnOrder").show();
+            break; 
+        default:
+            alert("No permesso");
+            break; 
     }
 }
 
