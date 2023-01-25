@@ -10,7 +10,7 @@ $(document).ready(function () {
             },
             success: function(result){
                 userPerm = result[0].description;
-                if(!managePermissions(result[0].permission, sections.users)){
+                if(!managePermissions(result, sections.users)){
                     window.location.replace("dashboard.html");
                 }
             },

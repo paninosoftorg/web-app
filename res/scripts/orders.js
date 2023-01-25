@@ -13,7 +13,7 @@ $(document).ready(function () {
       },
       success: function (result) {
         //alert("got permission: " + result[0].permission);
-        if (!managePermissions(result[0].permission, sections.orders)) {
+        if (!managePermissions(result, sections.orders)) {
           window.location.replace("dashboard.html");
         }
       },
