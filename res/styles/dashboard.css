@@ -38,6 +38,10 @@ footer::before {
     background-color: #cccccc;
 }
 
+.hidden-by-default {
+    display: none;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: auto;

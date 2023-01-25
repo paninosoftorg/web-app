@@ -26,11 +26,11 @@ $(document).ready(function(){
 function checkPermission(permission){
     //alert("Permission: " + permission);
     if(permission != 1 & permission != 2 ){
-        $("#btnUsers").remove();
+        $("#btnUsers").show();
     }
     if(permission != 1 && permission != 2 && permission != 3){
-        $("#btnStorage").remove();
-        $("#btnOrders").remove();
+        $("#btnStorage").show();
+        $("#btnOrders").show();
     }
 }
 
