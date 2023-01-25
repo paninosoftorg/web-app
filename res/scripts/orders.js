@@ -1,3 +1,30 @@
+var userID;
+
+$(document).ready(function () {
+  //alert("dash ready");
+  resumeSession(function (result) {
+    userID = result.user;
+    //alert("ID: " + userID);
+    $.ajax({
+      url: "https://paninos.ddns.net/food-api/API/permission/getPermissionByUserID.php",
+      type: "GET",
+      data: {
+        ID: userID
+      },
+      success: function (result) {
+        //alert("got permission: " + result[0].permission);
+        if (!managePermissions(result[0].permission, sections.orders)) {
+          window.location.replace("dashboard.html");
+        }
+      },
+      error: function (xhr, textStatus, errorThrown) {
+        alert(errorThrown);
+      }
+    });
+  });
+
+});
+
 var date = new Date();
 var dd = String(date.getDate()).padStart(2, "0");
 var mm = String(date.getMonth() + 1).padStart(2, "0");
@@ -182,14 +209,14 @@ function request() {
     if (this.readyState == 4 && this.status == 200) {
       req.addEventListener("load", reqListener);
     }
-    else if(this.status == 204){
+    else if (this.status == 204) {
       $("#lista_ordini").html("Nessun ordine trovato");
     }
   };
   req.open(
     "GET",
     "https://paninos.ddns.net/food-api/API/order/getArchiveBriefOrder.php?status_ID=" +
-      status_ID,
+    status_ID,
     true
   );
   req.send();

@@ -1,5 +1,28 @@
+var userID;
+
 $(document).ready(function () {
     manageStorage();
+
+    resumeSession(function (result) {
+        userID = result.user;
+        //alert("ID: " + userID);
+        $.ajax({
+            url: "https://paninos.ddns.net/food-api/API/permission/getPermissionByUserID.php",
+            type: "GET",
+            data: {
+                ID: userID
+            },
+            success: function (result) {
+                //alert("got permission: " + result[0].permission);
+                if (!managePermissions(result[0].permission, sections.inventory)) {
+                    window.location.replace("dashboard.html");
+                }
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                alert(errorThrown);
+            }
+        });
+    });
 });
 
 function manageStorage() {
@@ -11,8 +34,8 @@ function showProductList() {
     getProducts(function (productArray) {
         productArray.forEach(element => {
             console.log(element.name);
-            
-            li += "<button class=\"item-details\" onClick=\"selectProduct(this)\" id=\""+element.id+"\"><div class=\"id-column\"><p>" + element.id + "</p></div><div class=\"id-name\"><p>" + element.name + "</p></div><div class=\"id-price\"><p>"+element.price+"</p></div><div class=\"id-column\"><p>"+element.tag+"</p></div><div class=\"id-column\"><p>"+element.quantity+"</p></div></button>";
+
+            li += "<button class=\"item-details\" onClick=\"selectProduct(this)\" id=\"" + element.id + "\"><div class=\"id-column\"><p>" + element.id + "</p></div><div class=\"id-name\"><p>" + element.name + "</p></div><div class=\"id-price\"><p>" + element.price + "</p></div><div class=\"id-column\"><p>" + element.tag + "</p></div><div class=\"id-column\"><p>" + element.quantity + "</p></div></button>";
             //<div class=\"checklist-column\"><p><input type=\"checkbox\" name=\"checklist\" id=\"checklist\"></p></div>
         });
         $(".inventory-list-items").html(li);
@@ -32,7 +55,7 @@ function getProducts(_callback) {
     });
 }
 
-function selectProduct(button){
+function selectProduct(button) {
     $.ajax({
         url: "https://paninos.ddns.net/food-api/API/product/getProduct.php",
         type: "GET",
@@ -48,7 +71,7 @@ function selectProduct(button){
     });
 }
 
-function showProduct(product){
+function showProduct(product) {
     $("#edit_form_ID").attr("placeholder", product.id);
     $("#edit_form_Nome").attr("placeholder", product.name);
     $("#edit_form_Prezzo").attr("placeholder", product.price);
@@ -56,6 +79,6 @@ function showProduct(product){
     $("#edit_form_Quantita").attr("placeholder", product.quantity);
 }
 
-function updateProduct(name, price, tag, quantity){
+function updateProduct(name, price, tag, quantity) {
 
 }
