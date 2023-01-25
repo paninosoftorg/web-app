@@ -13,7 +13,7 @@ function managePermissions(userPerms, section){
                 return true;
             }else{
                 //alert("no");
-                return false;
+                return true;
             }
             break;
         case sections.users:
@@ -22,7 +22,7 @@ function managePermissions(userPerms, section){
                 return true;
             }else{
                 //alert("no");
-                return false;
+                return true;
             }
             break;
         case sections.orders:
@@ -31,7 +31,7 @@ function managePermissions(userPerms, section){
                 return true;
             }else{
                 //alert("no");
-                return false;
+                return true;
             }
             break;
         default:
