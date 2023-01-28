@@ -1,8 +1,6 @@
 var userID;
 
 $(document).ready(function () {
-  manageStorage();
-
   resumeSession(function (result) {
     userID = result.user;
     //alert("ID: " + userID);
@@ -16,6 +14,8 @@ $(document).ready(function () {
         //alert("got permission: " + result[0].permission);
         if (!managePermissions(result, sections.inventory)) {
           window.location.replace("dashboard.html");
+        }else{
+          manageStorage();
         }
       },
       error: function (xhr, textStatus, errorThrown) {
@@ -30,30 +30,18 @@ function manageStorage() {
 }
 
 function showProductList() {
-  var li =
-    '<table class="table item-details item-header"><thead><tr><th scope="col" class="id-column"><p>ID</p></th><<th scope="col" class="id-name"><p>Nome</p></th><<th scope="col" class="id-price"><p>Prezzo</p></th><<th scope="col" class="id-column"><p>Tag</p></th><<th scope="col" class="id-column"><p>Quantità</p></th></tr></thead><tbody><tr>';
+  var li = "";
   getProducts(function (productArray) {
-    productArray.forEach((element) => {
-      console.log(element.name);
-
-      li +=
-        '<th scope="row"><button class="item-details" onClick="selectProduct(this)" id="' +
-        element.id +
-        '"><td class="id-column"><p>' +
-        element.id +
-        '</p></td><td class="id-name"><p>' +
-        element.name +
-        '</p></td><td class="id-price"><p>' +
-        element.price +
-        '</p></td><td class="id-column"><p>' +
-        element.tag +
-        '</p></td><td class="id-column"><p>' +
-        element.quantity +
-        "</p></td></button></th>";
-      //<div class=\"checklist-column\"><p><input type=\"checkbox\" name=\"checklist\" id=\"checklist\"></p></div>
-    });
-    li += "</tr></tbody></table>";
-    $(".inventory-list-items").html(li);
+    $("#table_id").DataTable({
+      data: productArray,
+      columns: [
+        {data: 'id'},
+        {data: 'name'},
+        {data: 'price'},
+        {data: 'tag'},
+        {data: 'quantity'}
+      ]
+    }); 
   });
 }
 

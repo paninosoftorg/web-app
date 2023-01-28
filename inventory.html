@@ -2,131 +2,54 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="res/styles/inventory.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-    <title>Paninosoft | Inventario</title>
-    <link rel="icon" type="image/x-icon" href="res/styles/icon.ico">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="res/styles/inventory.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+  <title>Paninosoft | Inventario</title>
+  <link rel="icon" type="image/x-icon" href="res/styles/icon.ico">
 </head>
 
 <body>
 
-    <header class="top-header">
-        <canvas class="logo-img"></canvas>
-        <p>Inventario</p>
-    </header>
+  <header class="top-header">
+    <canvas class="logo-img"></canvas>
+    <p>Inventario</p>
+  </header>
 
-    <div class="root">
+  <div class="root">
 
-        <div class="inventory-screen">
-            <div class="inventory-list-column">
-                <div class="inventory-list-controls">
-                    <div class="inventory-list-controls-top">
-                        <input type="text" class="text-input" name="search" id="search" placeholder="Cerca...">
-                    </div>
-                    <div class="inventory-list-controls-bottom">
-                        <button id="add" class="button">
-                            Aggiungi
-                        </button>
-                        <button id="remove" class="button">
-                            Rimuovi
-                        </button>
-                    </div>
-                </div>
+    <div class="list-container">
+      <table id="table_id" class="display">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Prezzo</th>
+            <th>Tag</th>
+            <th>Quantità</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
 
-                <table class="table inventory-list-items">
-                    <thead>
-                    <tr class="item-details item-header">
-                        <th class="checklist-column">
-                            
-                        </th>
-                        <th class="id-column">
-                            <p>ID</p>
-                        </th>
-                        <th class="id-name">
-                            <p>Nome</p>
-                        </th>
-                        <th class="id-price">
-                            <p>Prezzo</p>
-                        </th>
-                        <th class="id-column">
-                            <p>Tag</p>
-                        </th>
-                        <th class="id-column">
-                            <p>Quantità</p>
-                        </th>
-                    </tr>
-                </thead>
-                
-                </table>
-
-                    <!-- <div class="item-details">
-                        <div class="checklist-column">
-                            <p>
-                                <input type="checkbox" name="checklist" id="checklist">
-                            </p>
-                        </div>
-                        <div class="id-column">
-                            <p>ID</p>
-                        </div>
-                        <div class="id-name">
-                            <p>Nome</p>
-                        </div>
-                        <div class="id-price">
-                            <p>Prezzo</p>
-                        </div>
-                        <div class="id-column">
-                            <p>Tag</p>
-                        </div>
-                        <div class="id-column">
-                            <p>Quantità</p>
-                        </div>
-                    </div> -->
-                    
-                </div>
-            </div>
-            <div class="inventory-edit-column">
-                <div class="inventory-single-element">
-                    <label for="edit_form_ID">ID</label>
-                    <input type="text" class="text-input" id="edit_form_ID" placeholder="ID" disabled>
-                    
-                    <label for="edit_form_Nome">Nome</label>
-                    <input type="text" class="text-input" id="edit_form_Nome" placeholder="Nome">
-                    
-                    <label for="edit_form_Prezzo">Prezzo</label>
-                    <input type="number" min="0" class="text-input" id="edit_form_Prezzo" placeholder="0">
-                    
-                    <label for="edit_form_Tag">Tag</label>
-                    <select id="edit_form_Tags" class="text-input" placeholder="Seleziona...">
-                        <option value="volvo">1</option>
-                        <option value="saab">2</option>
-                        <option value="fiat">3</option>
-                        <option value="audi">4</option>
-                    </select>
-                    
-                    <label for="edit_form_Quantita">Quantità</label>
-                    <input type="number" min="0" class="text-input" id="edit_form_Quantita" placeholder="0">
-                    
-                    <span style="height: 30px;"></span>
-
-                    <button id="edit_form_submit" class="button">
-                        Modifica
-                    </button>
-                </div>
-            </div>
-        </div>
-
+        </tbody>
+      </table>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-        <script src="res/scripts/permissionManager.js"></script>
-        <script src="res/scripts/resumeSession.js"></script>
-        <script src="res/scripts/auth.js"></script>
-    <script src="res/scripts/utils.js"></script>
-    <script src="res/scripts/inventory.js"></script>
-    <script>InventoryListHeight(); addEventListener("resize", (event) => { InventoryListHeight() });</script>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="res/scripts/permissionManager.js"></script>
+  <script src="res/scripts/resumeSession.js"></script>
+  <script src="res/scripts/auth.js"></script>
+  <script src="res/scripts/utils.js"></script>
+  <script src="res/scripts/inventory.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+
+  <script>InventoryListHeight(); addEventListener("resize", (event) => { InventoryListHeight() });</script>
 </body>
 
 </html>

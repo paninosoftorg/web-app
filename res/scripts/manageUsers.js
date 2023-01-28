@@ -26,13 +26,17 @@ function manageUsers() {
 }
 
 function showUsers() {
-    var li = "";
     getUsers(function (userArray) {
-        userArray.forEach(element => {
-            console.log(element.name);
-            li += "<ul id=\"row\"><li>" + element.name + "</li><li>" + element.surname + "</li><li>" + element.year + element.section + "</li><li>" + element.email + "</li></ul>"
-        });
-        $(".container").html(li);
+        $("#table_id").DataTable({
+            data: userArray,
+            columns: [
+              {data: 'name'},
+              {data: 'surname'},
+              {data: 'year'},
+              {data: 'section'},
+              {data: 'email'}
+            ]
+          }); 
     });
 }
 
